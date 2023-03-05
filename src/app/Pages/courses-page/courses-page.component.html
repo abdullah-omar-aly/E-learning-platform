@@ -1,0 +1,35 @@
+<app-header></app-header>
+
+<section class="bg-gray-1">
+    <section class="bg-primary rounded-bl-[6rem] text-white">
+        <div class="container flex flex-col lg:flex-row gap-5 items-center justify-center  min-h-[300px]">
+            <div class="basis-[50%] text-center lg:text-start">
+                <h2 class="text-2xl">Individual Learners Catalog</h2>
+                <p class="text-lg"> Transform your career with Nanodegree programs starting at<b> $399/mo.</b></p>
+            </div>
+            <div class="flex justify-center items-cente basis-[50%]">
+                <div class="bg-white min-w-[300px] w-full relative p-3 flex items-center rounded-md overflow-hidden">
+                    <input class="bg-transparent grow text-black text-lg outline-none" type="text" placeholder="Search" />
+                    <mat-icon class="text-primary">search</mat-icon>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-14">
+        <section class=" flex flex-col lg:flex-row gap-4">
+            <app-course-card></app-course-card>
+            <app-course-card></app-course-card>
+        </section>
+    </section>
+
+    <section>
+        <mat-tab-group>
+            <mat-tab label="First"> Content 1 </mat-tab>
+            <mat-tab label="Second"> Content 2 </mat-tab>
+            <mat-tab label="Third"> Content 3 </mat-tab>
+          </mat-tab-group>
+          
+    </section>
+</section>
+
