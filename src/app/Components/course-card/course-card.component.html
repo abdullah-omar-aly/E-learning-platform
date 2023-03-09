@@ -1,25 +1,24 @@
-<div>
-    <div
-        class="rounded-tr-[5rem] overflow-hidden h-32 bg-cover bg-center bg-[url('https://www.udacity.com/www-proxy/contentful/assets/2y9b3o528xhq/SzLy0ZloqObm1D7fuJEPf/bead7f6394816605e6e5f59acd47b4c1/catalog-card_2x__1_.jpg')]">
-        <!-- <img class="w-full" src="" alt="course cover"> -->
-    </div>
-    <div class="p-3 bg-white">
-        <h3 class="text-2xl font-semibold">Inroduction to Programming</h3>
-        <p class="py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed maiores atque obcaecati commodi
-            exercitationem
-            voluptatum? Cum repudiandae inventore repellendus quibusdam ex, eius officiis omnis sint, alias voluptate
-            beatae facere suscipit.</p>
-        <div class="flex gap-2">
-            <button class="bg-primary text-white  rounded-md p-3 basis-[50%]"
+<div class="w-full h-full flex flex-col">
+    <a routerLink="/courses/{{courseData.id}}" class="block rounded-tr-[5rem] overflow-hidden h-32">
+        <img
+         class="w-full h-full object-cover"
+         alt="course cover">
+         <!-- [src]="courseData.imageUrl"  -->
+        </a>
+    <div class="p-3 bg-white flex-grow flex flex-col justify-between">
+        <div>
+            <h3 class="text-2xl font-semibold">{{courseData.title}}</h3>
+            <p class="py-3">{{courseData.summary}}</p>
+        </div>
+        <div class="flex flex-col gap-2">
+            <app-rating *ngIf="courseData.rating" [ratingPercent]="courseData.rating"></app-rating>
+            <a routerLink="/courses/{{courseData.id}}" class="block">
+                <button class="bg-primary text-white  rounded-md p-3 w-full"
                 [routerLink]="['/courses' , 'course.id']">Enorll Now</button>
+            </a>
 
-            <button class="border-2 border-primary text-primary  rounded-md p-3  basis-[50%]">Download
-                Syllables</button>
+            <button class="border-2 border-primary text-primary  rounded-md p-3">Download Syllables</button>
         </div>
     </div>
 
-</div>
-
-<div>
-    <div></div>
 </div>

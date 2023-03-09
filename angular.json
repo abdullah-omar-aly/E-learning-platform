@@ -54,6 +54,8 @@
               "src/assets"
             ],
             "styles": [
+        
+              "src/ng-material-theme.scss",
               "src/styles.scss"
             ],
             "scripts": []

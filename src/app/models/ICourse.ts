@@ -11,18 +11,31 @@
 //     "skills-coverd": ['AWS Glue , Amazon S3 , AWS Data Warehouse , Redshift , Apache Airflow , Data Pipeline Creation , Cloud Computing Fluency']  ,
 //     prerequisites: ['intermediate Python ' , 'intermediate SQL ' , 'command line']
 // }
+// export default interface ICourse {
+//     id: string ,
+//     name: string ,
+//     description: string  ,
+//     level: string ,
+//     duration: string ,
+//     reviews: {
+//         count: number ,
+//         rating: number
+//     } ,
+//     "skills-coverd": string[]  ,
+//     prerequisites: string[] ,
+//     tags: string[] ,
+//     image: string
+// }
+
 export default interface ICourse {
-    id: string ,
-    name: string ,
-    description: string  ,
-    level: string ,
+    id: string,
+    imageUrl: string ,
+    title: string ,
+    summary: string ,
+    skillsCoverd:  string[],
+    reviewCount: number,
+    Prerequisites: string ,
     duration: string ,
-    reviews: {
-        count: number ,
-        rating: number
-    } ,
-    "skills-coverd": string[]  ,
-    prerequisites: string[] ,
-    tags: string[] ,
-    image: string
+    level: string ,
+    rating: number
 }

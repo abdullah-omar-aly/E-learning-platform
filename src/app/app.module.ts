@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -25,23 +25,33 @@ import {MatTabsModule} from '@angular/material/tabs';
 
 import {MatSelectModule} from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
-import { SelectComponent } from './Components/select/select.component';
 import { CourseDetailsPageComponent } from './Pages/course-details-page/course-details-page.component';
 import { CourseCardComponent } from './Components/course-card/course-card.component';
+import { AccountPageComponent } from './Pages/account-page/account-page.component';
+import { RatingComponent } from './Components/rating/rating.component';
+import { SignUpFormComponent } from './Components/sign-up-form/sign-up-form.component';
+import { LoginFormComponent } from './Components/login-form/login-form.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MainLayoutComponent } from './Components/main-layout/main-layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     CoursesPageComponent,
-    SelectComponent,
     CourseDetailsPageComponent,
     CourseCardComponent,
+    AccountPageComponent,
+    RatingComponent,
+    SignUpFormComponent,
+    LoginFormComponent,
+    MainLayoutComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule ,
+    HttpClientModule ,
     MatSidenavModule,
     MatGridListModule,
     MatMenuModule,
@@ -62,6 +72,7 @@ import { CourseCardComponent } from './Components/course-card/course-card.compon
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

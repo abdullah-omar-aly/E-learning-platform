@@ -1,8 +1,9 @@
-<header class="">
+<header>
     <nav class="container flex items-center justify-between h-20">
-        <h2 class="text-primary text-3xl font-bold">Mentor</h2>
-        <button class="lg:hidden bg-primary" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-            <mat-icon class="lg:hidden">menu</mat-icon>
-        </button>
+        <h2 class="text-primary text-3xl font-bold mb-1">Mentor</h2>
+        <div class="flex gap-4">
+            <a routerLink="/account/sign-in" class="border py-1 px-4 rounded-2xl">Sign In</a>
+            <a routerLink="/account/sign-up" class="bg-primary text-white py-1 px-4 rounded-2xl">Sign Up</a>
+        </div>
     </nav>
 </header>

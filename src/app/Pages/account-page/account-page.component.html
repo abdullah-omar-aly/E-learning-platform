@@ -1,0 +1,33 @@
+<style>
+
+</style>
+<section class="bg-gray-1 min-h-screen">
+    <div class="bg-white">
+        <div class="container py-6 ">
+            <a routerLink="/">
+                <h2 class="text-primary text-3xl font-bold font-mono inline-block">Mentor</h2>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="max-w-lg mx-auto px-3 mt-10 account-forms">
+
+        <!-- <app-rating></app-rating> -->
+        <div>
+            <a routerLink="/account/sign-up" routerLinkActive="active" class="navigation_link ">SIGN UP</a>
+            <a routerLink="/account/sign-in" routerLinkActive="active" class="navigation_link ">SIGN IN</a>
+        </div>
+        <div class="bg-white">
+            <router-outlet></router-outlet>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+</section>

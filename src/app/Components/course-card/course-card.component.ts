@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component , Input } from '@angular/core';
+import ICourse from 'src/app/models/ICourse';
 
 @Component({
   selector: 'app-course-card',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./course-card.component.scss']
 })
 export class CourseCardComponent {
-
+  @Input() courseData!: ICourse;
 }
