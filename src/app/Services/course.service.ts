@@ -24,4 +24,9 @@ export class CourseService {
     return this.http.get<ICourse[]>(`http://localhost:3000/courses?q=${query}`)
   }
 
+  getCourses(page: number , limit: number) {
+    return this.http.get<ICourse[]>(`http://localhost:3000/courses?_page=${page}&_limit=${limit}`)
+  }
+
+
 }

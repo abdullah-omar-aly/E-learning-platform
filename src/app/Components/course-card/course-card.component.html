@@ -1,24 +1,37 @@
-<div class="w-full h-full flex flex-col">
-    <a routerLink="/courses/{{courseData.id}}" class="block rounded-tr-[5rem] overflow-hidden h-32">
-        <img
-         class="w-full h-full object-cover"
-         alt="course cover">
-         <!-- [src]="courseData.imageUrl"  -->
-        </a>
-    <div class="p-3 bg-white flex-grow flex flex-col justify-between">
+<div class="article flex flex-col sm:flex-row shadow-lg h-[500px] sm:h-60 rounded-xl overflow-hidden">
+    <a routerLink="/courses/{{courseData.id}}" class="article__image basis-2/5 sm:basis-1/4 overflow-hidden">
+        <img class="w-full h-full object-cover" [src]="courseData.imageUrl" alt="course cover">
+    </a>
+    <div class="article__content w-full sm:w-3/4 px-3 py-2 flex flex-col flex-grow justify-between">
         <div>
-            <h3 class="text-2xl font-semibold">{{courseData.title}}</h3>
-            <p class="py-3">{{courseData.summary}}</p>
+            <h4 class="article__title text-2xl font-semibold italic">{{courseData.title}}</h4>
+            <p class="article__info py-1 line-clamp-2">
+                {{courseData.summary}}
+            </p>
         </div>
-        <div class="flex flex-col gap-2">
-            <app-rating *ngIf="courseData.rating" [ratingPercent]="courseData.rating"></app-rating>
-            <a routerLink="/courses/{{courseData.id}}" class="block">
-                <button class="bg-primary text-white  rounded-md p-3 w-full"
-                [routerLink]="['/courses' , 'course.id']">Enorll Now</button>
-            </a>
-
-            <button class="border-2 border-primary text-primary  rounded-md p-3">Download Syllables</button>
+        <div>
+            <div>
+                <span class="font-semibold">Skills Covered</span>
+                <p class="line-clamp-3 sm:truncate">{{courseData.skillsCoverd.join(", ")}}</p>
+            </div>
+            <div class="flex justify-between pt-1">
+                <div class="basis-1/2">
+                  <span class="font-semibold">Level:</span>  {{courseData.level}}
+                </div>
+                <div class="basis-1/2">
+                    <span class="font-semibold">Duration: </span><span>{{courseData.duration}}</span>
+                </div>
+              </div>
+        </div>
+        <div class="flex items-center justify-between">
+            <div>
+                <app-rating [ratingPercent]="courseData.rating"></app-rating>
+            </div>
+            <div>
+                <a routerLink="/courses/{{courseData.id}}" class="block ">
+                    <button class="bg-primary text-white  rounded-md px-4  pb-1 text-md">Enorll Now</button>
+                </a>
+            </div>
         </div>
     </div>
-
 </div>

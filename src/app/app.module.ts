@@ -33,6 +33,8 @@ import { SignUpFormComponent } from './Components/sign-up-form/sign-up-form.comp
 import { LoginFormComponent } from './Components/login-form/login-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MainLayoutComponent } from './Components/main-layout/main-layout.component';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+
 
 @NgModule({
   declarations: [
@@ -45,7 +47,7 @@ import { MainLayoutComponent } from './Components/main-layout/main-layout.compon
     RatingComponent,
     SignUpFormComponent,
     LoginFormComponent,
-    MainLayoutComponent,
+    MainLayoutComponent
   ],
   imports: [
     BrowserModule,
@@ -68,7 +70,8 @@ import { MainLayoutComponent } from './Components/main-layout/main-layout.compon
     MatInputModule,
     MatSelectModule ,
     MatTabsModule ,
-    FormsModule 
+    FormsModule ,
+    InfiniteScrollModule
 
   ],
   providers: [],
